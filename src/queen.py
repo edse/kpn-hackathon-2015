@@ -168,7 +168,7 @@ if __name__ == '__main__':
     def max_queens():
         queen = Queen(
             request.get_json(force=True).get('rows'),
-            request.get_json(force=True).get('cols'),
+            request.get_json(force=True).get('columns'),
             request.get_json(force=True).get('max_queens_on_sight'),
             request.get_json(force=True).get('initial_queens'),
         )
@@ -181,4 +181,4 @@ if __name__ == '__main__':
     def index():
         return "Ahhhh ma papaya!"
 
-    app.run(host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=8080)
